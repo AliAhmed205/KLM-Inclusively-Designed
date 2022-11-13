@@ -39,11 +39,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina van Apple
-  <img src="./images/Picture.jpg" width="375px" alt="De Homepagina van Apple">
+  <img src="./images/Picture.png" width="375px" alt="De Homepagina van Apple">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Iphone pagina Apple 
-  <img src="./images/Picture2.jpg" width="375px" alt="Iphonepagina van Apple">
+  <img src="./images/Picture2.png" width="375px" alt="Iphonepagina van Apple">
  
 </details>
 
