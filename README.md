@@ -35,15 +35,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.apple.com/nl/
-
+  https://www.klm.nl/information
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Homepagina van Apple
-  <img src="./images/Picture.png" width="375px" alt="De Homepagina van Apple">
+  Homepagina van KLM
+  <img src="./images/homepagina.png" width="375px" alt="Homepagina van de KLM, je kunt hier boeken">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Iphone pagina Apple 
-  <img src="./images/Picture2.png" width="375px" alt="Iphonepagina van Apple">
+  Informatie pagina van KLM 
+  <img src="./images/info-pagina.png" width="375px" alt="Informatie-pagina van de KLM, hier vind je informatie">
  
 </details>
 
