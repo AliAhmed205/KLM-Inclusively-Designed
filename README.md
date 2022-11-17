@@ -83,7 +83,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Doormiddel van de knoppen uit elkaar te zetten, die iemand met parkinson kan gebruiken. Zo verkomen
   ze namelijk dat ze perongeluk de rechter of linker knop toetsen ipv van de gewenste knop. 
 
-  <img src="./images/keyboarding.jpg>
+  <img src="./images/keyboarding.png>
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
   Ik heb ook de brillen gedragen. Elke bril kwam met een beperking, al moet ik wel zeggen dat de gele
