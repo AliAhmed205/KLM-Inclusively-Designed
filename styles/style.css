@@ -33,19 +33,9 @@ button, summary {
 /****************/
 
 nav {
-	background-color: #ffffffa8;
-	width: 100%;	
-	padding: 7px 0 7px 0; 
+	width: 100%; 
 }
 
-nav ul { 
-	display: flex;
-	justify-content: center;
-	list-style-type: none;
+nav ul {
+	display: flex; 
 }
-
-nav ul img {
-	width: 6%;
-}
-
-
