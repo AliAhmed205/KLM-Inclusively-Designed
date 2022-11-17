@@ -71,7 +71,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Misschien zou het handig zijn om iets met de pijltjes van het toetsenbord te kunnen. In plaats van
   alleen maar te tabben, bijvoorbeeld.
 
-  <img src="./images/FreeVector-Keyboard-Arrows.jpg"> 
+  <img src="./images/FreeVector-Keyboard-Arrows.jpg" alt="Pijltjes toetsen"> 
 
 
   #### Motoriek (shocks, elastiekjes)
@@ -82,7 +82,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Doormiddel van de knoppen uit elkaar te zetten, die iemand met parkinson kan gebruiken. Zo verkomen
   ze namelijk dat ze perongeluk de rechter of linker knop toetsen ipv van de gewenste knop. 
 
-  <img src="./images/keyboarding.png>
+  <img src="./images/adapted-mouse-and-keyboard.jpg" alt="Voorbeeld van hoe iemand met parkinson werkt">
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
   Ik heb ook de brillen gedragen. Elke bril kwam met een beperking, al moet ik wel zeggen dat de gele
@@ -95,7 +95,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   (Die dus wel nog steeds kunnen zien), een optie toevoegen waardoor zij misschien een tekstje op 
   de kleur zien. Zo is dat groen juist misschien wel rood, alleen hebben ze dat niet door. 
 
-  <img src="./images/type-of-color-blind.jpg">
+  <img src="./images/type-of-color-blind.jpg" alt="Kleurenblind persoon">
 </details>
 
 
