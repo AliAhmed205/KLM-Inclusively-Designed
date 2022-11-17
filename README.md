@@ -55,31 +55,48 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 1e werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De screenreader functie is heel chaotisch. Als blind persoon lijkt het me ook heel moeilijk om uberhaupt
+  aanpassingen te maken aan de snelheid, stem, etc. Op de website zelf gaf hij wel de onderdelen aan
+  maar met te veel extra informatie die niet relevant is. 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Tijdens het gebruiken van beide tools ging het wel lastig. Ik kon moeilijk navigeren met de muis
+  vanwege mijn beperking. Daarom gebruikte ik de "TAB" knop op mijn laptop. Ik kon via de screenreader
+  zo weten waar ik was maar toch niet duidelijk genoeg. De lading aan informatie zorgt voor onduidelijk
+  heden waardoor het lastig was om de website te gebruiken. 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Misschien zou het handig zijn om iets met de pijltjes van het toetsenbord te kunnen. In plaats van
+  alleen maar te tabben, bijvoorbeeld.
+
+  <img src="./images/FreeVector-Keyboard-Arrows.jpg"> 
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Met de parkinson triller was het niet te doen. Ik kon mijn macbook niet eens aanraken en het ging 
+  allemaal veelste moeilijk. Ik probeerde via mijn keyboard te bewegen wat vrij aardig maar toch 
+  niet soepel genoeg lukte. 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Doormiddel van de knoppen uit elkaar te zetten, die iemand met parkinson kan gebruiken. Zo verkomen
+  ze namelijk dat ze perongeluk de rechter of linker knop toetsen ipv van de gewenste knop. 
 
+  <img src="./images/keyboarding.jpg>
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Ik heb ook de brillen gedragen. Elke bril kwam met een beperking, al moet ik wel zeggen dat de gele
+  bril het minst beperkt overkwam. Ik snap dat ik mij dan moest voorstellen als iemand die kleurenblind is. 
+  De bril met de bedekte zijdes was ook redelijk geen dilemma. De wazige en de zwarte stip bril zorgte 
+  wel voor allemaal complicaties. Ik kon namelijk niet zien waar ik navigeerde en waar ik naar toe 
+  wilde gaan.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Het is natuurlijk moeilijk om uberhaupt te kunnen navigeren als slechtziende. Voor kleurblinden 
+  (Die dus wel nog steeds kunnen zien), een optie toevoegen waardoor zij misschien een tekstje op 
+  de kleur zien. Zo is dat groen juist misschien wel rood, alleen hebben ze dat niet door. 
 
+  <img src="./images/type-of-color-blind.jpg">
 </details>
 
 
@@ -149,7 +166,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Dana           | Robin              | Tristan      | Bronger          |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
