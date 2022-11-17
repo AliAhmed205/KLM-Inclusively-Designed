@@ -35,7 +35,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.klm.nl/information
+  https://www.klm.nl/
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina van KLM
   <img src="./images/homepagina.png" width="375px" alt="Homepagina van de KLM, je kunt hier boeken">
