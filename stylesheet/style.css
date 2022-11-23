@@ -1,0 +1,427 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button,
+summary {
+	cursor: pointer;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #111;
+	--color-background: #eee;
+	--klm-blauw: #00a1de;
+	--selectedtab: #003145;
+	--transparent: rgba(0, 49, 69, .8);
+    --button: #e37222; 
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+nav {
+	position: sticky;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 2px 2px 20px rgb(74, 74, 74);
+	height: 4em;
+	width: 100%;
+}
+
+nav ul {
+	display: flex;
+
+}
+
+nav ul li:first-of-type {
+	width: 4em;
+	list-style-type: none;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 1.2em;
+
+}
+
+nav ul li:nth-of-type(2) {
+	width: 4em;
+	list-style-type: none;
+	margin-right: 13em;
+}
+
+nav ul li:nth-of-type(3) {
+	width: 1.5em;
+	list-style-type: none;
+	padding-top: 1.3em;
+}
+
+/* Hier begint de main */ 
+
+section:first-of-type {
+    display: flex;
+    border: none;
+
+}
+
+section button {
+    display: flex;
+    justify-content: center;
+}
+
+section img {
+    width: 10%;
+    margin-right: 0.5em;
+}
+
+section button {
+    
+	color: var(--color-background);
+    background-color: var(--selectedtab);
+	margin: 0px;
+	width: 50%;
+	padding: 1em;
+	text-align: center;
+    border: none;
+
+  }
+  
+section button:hover {
+    background-color: white;
+    color: var(--klm-blauw)
+  }
+  
+section.active {
+    background-color: rgb(255, 255, 255);
+    color: var(--klm-blauw)
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+
+  /* Vlucht */
+
+main article {
+	display: grid;
+	margin: 1em 0em 0em 1em;
+}
+
+main article:nth-of-type(2) {
+	display: grid;
+	margin: 3em 0em 0em 1em;
+}
+
+main article:nth-of-type(3) {
+	display: grid;
+	margin: 3em 0em 1em 1em;
+}
+
+main article {
+	display: grid;
+	margin: 1em 0em 0em 1em;
+}
+
+main article p {
+	font-family: 'Roboto', sans-serif;
+	color: var(--color-text);
+	font-weight: 400;
+}
+
+main article:nth-of-type(2) p {
+	font-family: 'Roboto', sans-serif;
+	color: #9da0a0;
+	font-weight: 400;
+}
+
+main article:nth-of-type(3) p {
+	font-family: 'Roboto', sans-serif;
+	color: #9da0a0;
+	font-weight: 400;
+}
+
+main article h5 {
+	font-family: 'Roboto', sans-serif;
+	color: #717575;
+	font-weight: 300;
+	margin-bottom: 0.6em;
+}
+
+main article hr {
+	width: 90%;
+	background-color: #bfc1c1;
+	height: 0.01em;
+	border-style: none;
+}
+
+main article object {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid;
+	margin-top: 0.5em;
+	margin-left: 13.5em;
+}
+
+main article:nth-of-type(2) object {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid;
+	margin-top: 0.5em;
+	margin-left: 10em;
+}
+
+main article:nth-of-type(3) object {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid;
+	margin-top: 0.5em;
+	margin-left: 10em;
+}
+
+main article section {
+	display: flex;
+}
+
+main article section img {
+	width: 4%;
+	margin-right: 1em;
+}
+
+h3 {
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    color: var(--klm-blauw)
+}
+
+#miles img {
+   width: 20%;
+   margin-left: 42%;
+   margin-top: 3%;
+}
+
+#miles h2 {
+	font-family: 'Noa LT W01 Light';
+    text-align: center;
+    color: var(--selectedtab);
+    margin-top: 0.5em;
+}
+
+#miles p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--selectedtab);
+    font-size: 0.8em;
+    text-align: center;
+    width: 80%;
+    margin-left: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 2.3em;
+}
+
+#miles a {
+margin-left: 0.2em;
+background-color: var(--button);
+color: white;
+text-decoration: none;
+padding: 0.5em 9em 0.5em 9em;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+box-shadow: 1px 3   px 5px rgb(74, 74, 74);
+
+
+}
+ /* Slideshow */
+/* Slideshow container */
+
+.slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+    margin-top: 1.5em;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 12em;
+	width: auto;
+	margin-top: 9em;
+	padding: 5px 10px 5px 10px;
+	color: var(--klm-blauw);
+	font-size: 10px;
+	border-radius: 200px;
+	user-select: none;
+	box-shadow: 1px 1px 5px rgb(74, 74, 74);
+	z-index: 1;
+    margin-left: 1em;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 10px;
+	border-radius: 200px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Caption text */
+h4 {
+	position: absolute;
+	top: 0;
+	color: white;
+	margin: 2em 1em 1em 1em;
+	font-family: 'Noa LT W01 Light';
+	font-weight: 100;
+	background-color: var(--transparent);
+	padding-bottom: 6.3em;
+	padding-top: 0.5em;
+	padding-left: 1em;
+	width: 90%;
+}
+
+.mySlides p {
+	position: absolute;
+	top: 4em;
+	font-size: 0.9em;
+	width: 80%;
+	left: 1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 200;
+	color: white;
+	padding-left: 1.4em;
+	padding-top: 1em;
+
+}
+
+.mySlides a {
+	position: absolute;
+	text-transform: uppercase;
+	color: white;
+	left: 3em;
+	top: 10.2em;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.8em;
+	text-decoration: none;
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
+	margin: 0 2px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	box-shadow: 1px 1px 5px rgb(74, 74, 74);
+
+}
+
+.active,
+.dot:hover {
+	background-color: black;
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 2s;
+}
+
+.punten {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7em;
+}
+
+footer nav {
+	position: fixed;
+	display: flex;
+	z-index: 1;
+	bottom: 0;
+	list-style-type: none;
+	width: 100%;
+	justify-content: center;
+	color: black;
+
+}
+footer nav li {
+	display: flex;
+	justify-content:center ;
+}
+
+footer nav a img { 
+	width: 25%;
+	display: flex;
+	margin-left: 30px;
+	padding-top: 10px;
+}
+
+
+footer nav li a {
+	display: grid;
+	color: black;
+	text-decoration: none;
+	font-size: 11px;
+	font-family: 'Segoe UI', sans-serif;
+	text-align: center;
+	}
+@keyframes fade {
+	from {
+		opacity: 0.5
+	}
+
+	to {
+		opacity: 1
+	}
+}
+

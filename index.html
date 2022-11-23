@@ -1,30 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="jouw naam">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>KLM Royal Dutch Airlines</title>
-
-	<link href="./styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <title>KLM Royal Dutch Airlines</title>
+    <script defer src="scripts/script.js"></script>
+    <link href="./stylesheet/style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/8d463864bfee0c8f2eac087e49981567?family=Noa+LT+Std" rel="stylesheet"
+        type="text/css" />
+    <link href="//db.onlinewebfonts.com/c/5e939db72f017c72350cbc51a81145eb?family=Noa+LT+W01+Light" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-			<li><a href="#"></a><img src="./images/menu.svg" alt="Hamburger Menu navigatie"></li>
-			<li><a href="#"></a><img src="./images/logo.svg" alt="Logo van de KLM"></li>
-			<li><a href="#"></a><img src="./images/account.svg" alt="Accountgegevens"></li>
-		</ul>
-		</nav>
-		</header>
-	<main></main>
-	<footer></footer>
-	<script defer src="scripts/script.js"></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="./images/menu.svg" alt="Menuknop"></a></li>
+                <li><a href="#"><img src="./images/logo.svg" alt="Logo"></a></li>
+                <li><a href="#"><img src="./images/account.svg" alt="Account"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Dit zijn de tabs voor "Mijn vlucht zoeken" & "Boek met miles" -->
+        <section>
+            <button class="tablinks" onclick="openCity(event, 'vlucht')"><img src="./images/airplane.svg"
+                    alt="vliegtuig">Mijn vlucht zoeken</button>
+            <button class="tablinks" onclick="openCity(event, 'miles')"><img src="./images/airmiles-blue.svg"
+                    alt="munten"> Boek met miles</button>
+        </section>
+
+        <!-- Mijn vlucht zoeken -->
+        <section id="vlucht" class="tabcontent">
+            
+            <!--- Reis --->
+            <article>
+                <h5>Reis</h5>
+                <section>
+                    <p>Retourreis</p>
+                    <object></object>
+                </section>
+                <hr>
+            </article>
+
+            <!--- Vertrek vanaf --->
+            <article>
+                <h5></h5>
+                <section>
+                    <img src="./images/stijgen.svg" alt="Stijgend Vliegtuig">
+                    <p>Vertrek vanaf*</p>
+                    <object></object>
+                </section>
+                <hr>
+            </article>
+
+            <!--- Aankomst op --->
+            <article>
+                <h5></h5>
+                <section>
+                    <img src="./images/dalen.svg" alt="Dalend Vliegtuig">
+                    <p>Aankomst op*</p>
+                    <object></object>
+                </section>
+                <hr>
+            </article>
+
+            <h3>ga verder</h3>
+        </section>
+
+        <!-- Boek met miles -->
+        <section id="miles" class="tabcontent">
+            <img src="./images/fb-ivory-horizontal-large.svg" alt="Miles Symbool">
+            <h2>Flying Blue Miles</h2>
+            <p> Log in op uw Flying Blue-account om een ticket met Miles te boeken.</p>
+            <a href="#">inloggen</a>
+        </section>
+        
+        <!--- Slideshow --->
+        <section class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <section class="mySlides fade">
+                <img src="./images/slide1.jpeg" style="width:100%">
+                <h4>Vertrouwd op reis</h4>
+                <p> Lees meer over onze veiligheidsmaatregelen, ons flexibele boekingsbeleid en actuele vluchtaanbod.
+                </p>
+                <a href="#">> <u>meer informatie</u></a>
+            </section>
+
+            <section class="mySlides fade">
+                <img src="./images/slide2.jpeg" style="width:100%">
+                <h4> Nieuw bij KLM! Premium Comfort Class</h4>
+                <p>Kies voor extra comfort met Premium Comfort Class. Geniet van luxe voordelen tegen een scherpe prijs. </p>
+                <a href="#">> <u>ontdek premium comfort class</u></a>
+            </section>
+
+            <section class="mySlides fade">
+                <img src="./images/slide3.jpeg" style="width:100%">
+                <h4>Zin in een Europese stedentrip</h4>
+                <p>Vlieg naar de mooiste Europese bestemmingen en ontdek nieuwe culturen.</p>
+                <a href="#">> <u>meer informatie</u></a>
+            </section>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+        <br>
+
+        <!-- The dots/circles -->
+        <section class="punten">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </section>
+    </main>
+    <footer>
+            <nav>
+                <li><a href="#"><img src="./images/home.svg" alt="Home">Home</a></li>
+                <li><a href="#"><img src="./images/mijnreis.svg" alt="Home">Mijn reis</a></li>
+                <li><a href="#"><img src="./images/checkin.svg" alt="Home">Check-in</a></li>
+                <li><a href="#"><img src="./images/coronvirus.svg" alt="Home">Coronavirus</a></li>
+                <li><a href="#"><img src="./images/informatie.svg" alt="Home">Informatie</a></li>
+            </nav>
+    </footer>
+    <script src="./javascript/script.js"></script>
 </body>
 
 </html>
