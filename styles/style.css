@@ -1,30 +1,36 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box; 
-  margin: 0;
-  padding: 0;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+
+
 }
 
-button, summary {
-	cursor: pointer;
+button,
+summary {
+	cursor: url('/images/flugzeug.svg'), pointer;
 }
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--klm-blauw: #00a1de;
+	--color-background: #eee;
+	--wit-tint2: var(--wit-tint2);
+	--selectedtab: #003145;
+	--transparent: rgba(0, 49, 69, .65);
+	--button: #e37222;
+	--brood-tekst: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--kop-tekst: 'Noa LT Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-
 
 
 
@@ -32,10 +38,1680 @@ button, summary {
 /* JOUW STYLING */
 /****************/
 
-nav {
-	width: 100%; 
+/* jouw code */
+
+:focus {
+	border: none;
+	box-shadow: 2px 2px 20px rgb(96, 96, 96);
+	outline: none;
+	transition: 0.5s;
 }
 
-nav ul {
-	display: flex; 
+
+/************/
+/* HEADER */
+/***********/
+
+header nav:nth-of-type(2) {
+	top: 0;
+	z-index: 11;
+	box-shadow: 2px 2px 20px rgb(96, 96, 96);
+}
+
+header nav:first-of-type {
+	display: grid;
+	width: 70%;
+	list-style-type: none;
+	padding-right: 0em;
+
+}
+
+header nav:first-of-type li a {
+	display: block;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: var(--selectedtab);
+	padding: 1.5em 3em 1.5em 3em;
+}
+
+/************/
+/* HAMBURGERMENU */
+/***********/
+.hamburger-menu.hamburger-menu-tonen nav:first-of-type {
+	position: fixed;
+	transition: transform 0.3s;
+	transform: translateX(0);
+
+}
+
+.hamburger-menu header::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background-color: rgb(0, 0, 0);
+	opacity: 0;
+	transition: opacity 1s;
+	z-index: 999;
+	pointer-events: none;
+
+}
+
+.hamburger-menu.hamburger-menu-tonen header::after {
+	opacity: .5;
+}
+
+
+.hamburger-menu header nav:first-of-type {
+	position: absolute;
+	z-index: 999999;
+	background-color: var(--color-background);
+	height: 100%;
+	width: 70%;
+	transform: translateX(-200%);
+	transition: 0.5s;
+}
+
+.hamburger-menu header nav:first-of-type {
+	display: grid;
+	width: 70%;
+	list-style-type: none;
+	padding-right: 0em;
+
+}
+
+nav:first-of-type ul li a {
+	text-decoration: none;
+}
+
+
+.hamburger-menu nav:first-of-type ul>li a:hover {
+	transition: 1s;
+	background-color: #d5d5d5;
+	border-left: solid 4px var(--klm-blauw);
+
+}
+
+
+
+.hamburger-menu header nav:first-of-type li {
+	margin: 0;
+	background-color: var(--color-background);
+}
+
+.hamburger-menu header nav:first-of-type li:first-of-type {
+	margin: 0;
+	background-color: #d5d5d5;
+	border-left: solid 4px var(--button);
+}
+
+
+
+body.hamburger-menu-tonen::before {
+	opacity: .5;
+}
+
+
+/********************************/
+/* SPAN VOOR DE SCREEN READER */
+/********************************/
+
+span[class="screen-reader"] {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	justify-content: nowrap;
+	width: 1px;
+}
+
+header nav:nth-of-type(2) ul li a {
+	display: block;
+}
+
+
+
+/**********************/
+/* DE STICKY NAVBAR */
+/*********************/
+nav:nth-of-type(2) {
+	position: sticky;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 2px 2px 20px rgb(74, 74, 74), 0 0 0 transparent;
+	height: 4em;
+	width: 100%;
+	z-index: 0;
+}
+
+nav:nth-of-type(2) ul {
+	display: flex;
+
+}
+
+nav:nth-of-type(2) ul li:first-of-type {
+	width: 4em;
+	list-style-type: none;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 1.2em;
+
+}
+
+nav:nth-of-type(2) ul li:nth-of-type(2) {
+	width: 4em;
+	list-style-type: none;
+	margin-right: 13em;
+}
+
+nav:nth-of-type(2) ul li:nth-of-type(3) {
+	width: 1.5em;
+	list-style-type: none;
+	padding-top: 1.3em;
+}
+
+/*************************/
+/* HIER BEGINT DE MAIN */
+/************************/
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+
+main>p {
+	margin-top: 1em;
+	padding: 0 1em 0 1em;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+	font-weight: 400;
+	color: #707575;
+}
+
+main>h2 {
+	padding: 2em 1em 2em 1em;
+	font-family: var(--kop-tekst);
+	color: #003145;
+	font-size: 1.125rem;
+}
+
+main>h3 {
+	padding: 2em 0em 1em 1.5em;
+	font-family: var(--kop-tekst);
+	color: black;
+
+}
+
+/************************************/
+/* Dit zijn de twee tabjes bovenin*/
+/************************************/
+main>section:first-of-type {
+	display: flex;
+	border: none;
+
+}
+
+main>section:first-of-type>button {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+
+main>section:first-of-type svg {
+	width: 10%;
+	margin-right: 0.5em;
+}
+
+
+main>section:first-of-type section:first-of-type>button {
+	display: flex;
+	justify-content: center;
+	color: var(--klm-blauw);
+	background-color: var(--color-background);
+	margin: 0px;
+	width: 100%;
+	padding: 1em;
+	border: none;
+	fill: var(--klm-blauw);
+}
+
+main>section:first-of-type section:nth-of-type(2)>button {
+	display: flex;
+	color: var(--color-background);
+	background-color: var(--selectedtab);
+	margin: 0px;
+	width: 100%;
+	padding: 1em;
+	border: none;
+	justify-content: center;
+	fill: var(--color-background);
+	transition: 0.3s;
+
+}
+
+main>section:first-of-type section:nth-of-type(2) button:hover {
+	background-color: var(--color-background);
+	color: var(--klm-blauw);
+	fill: var(--klm-blauw);
+	transition: 0.5s;
+
+}
+
+main>section:first-of-type section:nth-of-type(2) button:focus {
+	background-color: var(--color-background);
+	color: var(--klm-blauw);
+	fill: var(--klm-blauw);
+	transition: 0.5s;
+
+}
+
+main>section:nth-of-type(2).active {
+	background-color: rgb(255, 255, 255);
+	color: var(--klm-blauw)
+}
+
+/*************************************/
+/* INVOEREN VAN BESTEMMING EN VERTREK*/
+/************************************/
+form[class="form"] {
+	margin-top: 2em;
+}
+
+fieldset[class="form-group"] {
+	margin-top: 1em;
+	margin-left: 1em;
+	position: relative;
+	width: 90%;
+	display: flex;
+
+}
+
+fieldset[class="form-group"] svg {
+	width: 5%;
+	margin-top: 13px;
+	order: -1;
+}
+
+fieldset[class="form-group"]+.section[class="form-group"] {
+	margin-top: 30px;
+}
+
+fieldset {
+	border: none;
+}
+
+
+label[class="form-label"] {
+	position: absolute;
+	left: 1.875em;
+	top: 10px;
+	color: #999;
+	background-color: #fff;
+	z-index: 10;
+	transition: transform 150ms ease-out, font-size 150ms ease-out;
+	font-family: var(--brood-tekst);
+
+}
+
+.focused label[class="form-label"] {
+	transform: translateY(-125%);
+	font-size: .75em;
+}
+
+input[class="form-input"] {
+	position: relative;
+	padding: 12px 0px 5px 0;
+	width: 100%;
+	outline: 0;
+	border: 0;
+	box-shadow: 0 1px 0 0 #e5e5e5;
+	transition: box-shadow 150ms ease-out;
+	margin-left: 1em;
+}
+
+input[class="form-input"]:focus {
+	box-shadow: 0 2px 0 0 var(--klm-blauw);
+}
+
+fieldset[class="form-group"]:first-of-type img:first-of-type:invalid {
+	display: none;
+}
+
+input[class="form-input"]:invalid {
+	box-shadow: 0 2px 0 0 red;
+}
+
+input[class="form-input"]:invalid.focused {
+	box-shadow: 0 2px 0 0 red;
+}
+
+
+input[class="form-input"]:valid+label {
+	transform: translateY(-125%);
+	font-size: .75em;
+}
+
+
+input[class="form-input"]:valid+label {
+	color: rgb(74, 74, 74);
+}
+
+input[class="form-input"]:valid.filled+label {
+	transform: translateY(-125%);
+}
+
+input[class="form-input"]:invalid+label {
+	color: red;
+}
+
+:invalid~svg {
+	fill: red;
+}
+
+:valid~svg {
+	fill: var(--klm-blauw);
+}
+/***************/
+/* FORMULIER */
+/**************/
+main>section:nth-of-type(2) {
+	display: grid;
+	margin: 1em 0em 0em 1em;
+}
+
+main>section:nth-of-type(2) section {
+	display: flex;
+}
+
+main>section:nth-of-type(2) h5 {
+	font-family: var(--brood-tekst);
+	color: #717575;
+	font-weight: 300;
+	margin-bottom: 0.6em;
+}
+
+main>section:nth-of-type(2) p {
+	font-family: var(--brood-tekst);
+	color: var(--color-text);
+	font-weight: 400;
+}
+
+main>section:nth-of-type(2) object {
+	color: rgba(0, 0, 0, .38);
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid;
+	margin-top: 0.5em;
+	margin-left: 19.5em;
+}
+
+main>section:nth-of-type(2) img {
+	width: 4%;
+	margin-right: 1em;
+}
+
+main>section:nth-of-type(2) hr {
+	width: 90%;
+	background-color: #bfc1c1;
+	height: 0.01em;
+	border-style: none;
+}
+
+main>section:nth-of-type(2) {
+	display: grid;
+	margin: 1em 0em 0em 1em;
+}
+
+main>section:nth-of-type(2) h5 {
+	font-family: var(--brood-tekst);
+	color: #717575;
+	font-weight: 300;
+	margin-bottom: 0.6em;
+}
+
+main>section:nth-of-type(2) p {
+	font-family: var(--brood-tekst);
+	color: var(--color-text);
+	font-weight: 400;
+}
+
+main>section:nth-of-type(2) object {
+	color: rgba(0, 0, 0, .38);
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid;
+	margin-top: 0.5em;
+	margin-left: 15em;
+}
+
+main>section:nth-of-type(2) img {
+	width: 4%;
+	margin-right: 1em;
+}
+
+main>section:nth-of-type(2) hr {
+	width: 90%;
+	background-color: #bfc1c1;
+	height: 0.01em;
+	border-style: none;
+}
+
+/********************************/
+/* BEGIN VAN DE DERDE SECTION */
+/*******************************/
+main>section:nth-of-type(3) {
+	width: 100%;
+	overflow-x: hidden;
+
+
+}
+
+main>section:nth-of-type(3) section {
+	position: absolute;
+	background-color: #003245b5;
+	width: 90%;
+	overflow-x: hidden;
+	color: var(--color-background);
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	justify-content: center;
+	margin-top: 2em;
+	margin-left: 1em;
+}
+
+main>section:nth-of-type(3) section a {
+	color: var(--color-background);
+	margin-top: 0.5em;
+	font-family: var(--brood-tekst);
+	text-transform: uppercase;
+}
+
+main>section:nth-of-type(3) section h2 {
+	font-family: var(--kop-tekst);
+	font-weight: 100;
+	font-size: larger;
+	margin-bottom: 0.3em;
+}
+
+main>section:nth-of-type(3) p {
+	font-family: var(--brood-tekst);
+	font-weight: 200;
+	width: 100%;
+	line-height: 1.5em;
+
+}
+
+main>section:nth-of-type(3) img {
+	display: block;
+	object-fit: cover;
+	width: 120%;
+	height: 240px;
+	transform: translateX(-10%);
+}
+
+/********************************/
+/* BEGIN VAN DE VIERDE SECTION */
+/*******************************/
+main>section:nth-of-type(4)>button {
+	display: block;
+	flex-direction: column;
+	object-fit: cover;
+	width: 120%;
+	height: 240px;
+	transform: translateX(-10%);
+}
+main section:nth-of-type(4)>button:first-of-type {
+
+	align-items: flex-end;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+	text-align: center;
+	background: no-repeat url("../images/left.svg") 10%;
+	background-size: 30%;
+	background-position: 55%;
+	border: none;
+	margin-left: 1em;
+}
+
+main section:nth-of-type(4)>button:nth-of-type(2) {
+
+	align-items: flex-end;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+	text-align: center;
+	background: no-repeat url("../images/right.svg") 10%;
+	background-size: 30%;
+	background-position: 55%;
+	border: none;
+	margin-right: 1em;
+
+}
+
+/*************************************/
+/* DE BESTEMMINGEN VAN KLM HOLIDAYS */
+/************************************/
+main>ul {
+	display: flex;
+	position: relative;
+	overflow-x: scroll;
+	width: 90%;
+	margin-left: 1em;
+	list-style-type: none;
+	scroll-snap-type: x mandatory;
+
+}
+
+main>ul:nth-of-type(2) {
+	display: flex;
+	position: relative;
+	overflow-x: scroll;
+	width: 350px;
+	height: 360px;
+	margin-left: 1em;
+	list-style-type: none;
+	scroll-snap-type: x mandatory;
+	margin-bottom: 1em;
+}
+
+main>ul:nth-of-type(3) {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	width: 100%;
+	background-color: var(--wit-tint2);
+}
+
+main>ul:nth-of-type(3) li {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	width: 100%;
+	background-color: var(--wit-tint2);
+	color: var(--selectedtab);
+	font-family: var(--kop-tekst)
+}
+
+main>ul:nth-of-type(3) li a {
+	padding: 1em;
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	width: 100%;
+	background-color: var(--wit-tint2);
+	color: var(--selectedtab);
+	font-family: 'Noa LT Std';
+}
+
+main>ul:nth-of-type(3) hr {
+	margin-left: 1em;
+	margin-right: 1em;
+	border: solid 0.5px #c2deea;
+}
+
+main>ul:nth-of-type(3) svg {
+	width: 4%;
+}
+
+
+main>ul li:first-of-type {
+	scroll-snap-align: start;
+}
+
+main>ul li:nth-of-type(2) {
+	scroll-snap-align: center;
+}
+
+main>ul li:nth-of-type(3) {
+	scroll-snap-align: end;
+}
+
+main>ul:nth-of-type(2) li img {
+	box-shadow: rgb(170, 170, 170) 0.5px 5px 10px;
+
+}
+
+main>ul:nth-of-type(2) li:first-of-type {
+	scroll-snap-align: start;
+
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(2) {
+	scroll-snap-align: center;
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(3) {
+	scroll-snap-align: center;
+
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(4) {
+	scroll-snap-align: end;
+
+}
+
+main>ul li div:first-of-type {
+	position: absolute;
+	top: 11.8em;
+	left: 0.7em;
+	width: 70%;
+	background-color: var(--transparent);
+	color: var(--color-background);
+	padding: 0.5em 0.5em 1em 0.5em;
+}
+
+main>ul li div:first-of-type h5 {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 200;
+
+}
+
+main>ul li:nth-of-type(2) div {
+	position: absolute;
+	top: 11.8em;
+	left: 21.5em;
+	width: 70%;
+	background-color: var(--transparent);
+	color: var(--color-background);
+	padding: 0.5em 0.5em 1em 0.5em;
+}
+
+main>ul li:nth-of-type(3) div {
+	position: absolute;
+	top: 11.8em;
+	left: 42em;
+	width: 70%;
+	background-color: var(--transparent);
+	color: var(--color-background);
+	padding: 0.5em 0.5em 1em 0.5em;
+}
+
+/*************************************/
+/* WILT U UW REIS VERRIJKEN SECTION */
+/************************************/
+main>ul:nth-of-type(2) li div:first-of-type {
+	box-shadow: rgb(170, 170, 170) 0.5px 5px 10px;
+	position: absolute;
+	top: 15em;
+	left: 0em;
+	width: 85.2%;
+	background-color: var(--color-background);
+	color: var(--selectedtab);
+	padding: 1em 0.5em 2em 1em;
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(2) div {
+	position: absolute;
+	top: 15em;
+	left: 20.6em;
+	width: 85.2%;
+	background-color: var(--color-background);
+	color: var(--selectedtab);
+	padding: 1em 0.5em 2em 1em;
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(3) div {
+	box-shadow: rgb(170, 170, 170) 0.5px 5px 10px;
+	position: absolute;
+	top: 15em;
+	left: 41.2em;
+	width: 85.2%;
+	background-color: var(--color-background);
+	color: var(--selectedtab);
+	padding: 1em 0.5em 1em 1em;
+}
+
+
+main>ul:nth-of-type(2) li:nth-of-type(4) div {
+	box-shadow: rgb(170, 170, 170) 0.5px 5px 10px;
+	position: absolute;
+	top: 15em;
+	left: 61.8em;
+	width: 100%;
+	background-color: var(--color-background);
+	color: var(--selectedtab);
+	padding: 1em 0.5em 2em 1em;
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(4) div a:hover main>ul li div h5 {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 200;
+}
+
+/*************************************/
+/* CHILD ATTTRIBUTEN VOOR KLM HOLIDAYS */
+/************************************/
+
+main>ul li div h3 {
+	font-family: var(--kop-tekst);
+	margin-top: 0.25em;
+	margin-bottom: 0.50em;
+}
+
+main>ul li div p {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	font-size: .875rem;
+}
+
+main>ul li div span {
+	font-weight: 700;
+	font-size: 1.20em;
+}
+
+main>ul li a {
+	text-decoration: none;
+	margin-top: 0;
+	width: 0%;
+}
+
+main>ul li {
+	margin-right: 2em;
+}
+
+main>ul li:last-of-type {
+	margin-right: 0em;
+}
+
+main>ul li div p {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	font-size: .875rem;
+}
+
+/******************************************/
+/*  BUTTON INSTELLINGEN */
+/******************************************/
+
+main>button {
+	width: 30%;
+	align-self: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: var(--color-background);
+	text-align: center;
+	padding-top: 2%;
+	border: none;
+	padding-bottom: 2%;
+	color: var(--klm-blauw);
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: 0.5s;
+}
+
+main>button:nth-of-type(2) {
+	display: inline-block;
+	width: 90%;
+	min-width: 200px;
+	align-self: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: var(--klm-blauw);
+	text-align: center;
+	padding-top: 3%;
+	border: none;
+	padding-bottom: 3%;
+	color: var(--color-background);
+	font-weight: 600;
+	text-transform: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: 0.5s;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 1em;
+}
+
+main>button:hover {
+	background-color: #eaf9ff;
+	transition: 1s;
+}
+
+main>button:nth-of-type(2):hover {
+	box-shadow: 0 6px 8px rgb(0 0 0 / 50%);
+	background-color: var(--klm-blauw);
+	transition: 0.5s;
+}
+
+main section:nth-of-type(4) {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1em;
+
+
+	
+}
+
+/******************************************/
+/* CHILD ATTTRIBUTEN VOOR REIS VERRIJKEN */
+/******************************************/
+
+main>ul:nth-of-type(2) li:first-of-type div h3 {
+	font-family: var(--brood-tekst);
+	margin-top: 0.25em;
+	margin-bottom: 0.50em;
+	font-size: 1em;
+	font-weight: 500;
+
+}
+
+main>ul:nth-of-type(2) li:first-of-type div {
+	padding-bottom: 1em;
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(2) div h3 {
+	font-family: var(--brood-tekst);
+	margin-top: 0.25em;
+	margin-bottom: 0.50em;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(3) div h3 {
+	font-family: var(--brood-tekst);
+	margin-top: 0.25em;
+	margin-bottom: 0.50em;
+	font-size: 1em;
+	font-weight: 500;
+	width: 80%;
+}
+
+main>ul:nth-of-type(2) li:nth-of-type(4) div h3 {
+	font-family: var(--brood-tekst);
+	margin-top: 0.25em;
+	margin-bottom: 0.50em;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+
+
+/******************************************/
+/* ATTRIBUTEN VAN DE DERDE BUTTON         */
+/******************************************/
+main>button:nth-of-type(3) {
+	display: inline-block;
+	width: 90%;
+	min-width: 200px;
+	align-self: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: var(--klm-blauw);
+	text-align: center;
+	padding-top: 3%;
+	border: none;
+	padding-bottom: 3%;
+	color: var(--color-background);
+	font-weight: 600;
+	text-transform: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: 0.5s;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 3em;
+}
+
+main>button:nth-of-type(3):hover {
+	transition: 0.5s;
+	box-shadow: 2px 5px 10px rgb(148, 148, 148);
+}
+
+main>button:nth-of-type(4) {
+	display: inline-block;
+	width: 50%;
+	min-width: 200px;
+	align-self: center;
+	margin-top: 3em;
+	margin-bottom: 1em;
+	background-color: var(--color-background);
+	border: solid 1px var(--klm-blauw);
+	border-radius: 4px;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	color: var(--klm-blauw);
+	font-weight: 600;
+	text-transform: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: 0.5s;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 3em;
+
+}
+
+main>button:nth-of-type(4):hover {
+	transition: 0.5s;
+	box-shadow: 2px 5px 10px rgb(148, 148, 148);
+}
+
+main>button:nth-of-type(4) svg {
+	width: 8%;
+	margin-left: 10px;
+	color: var(--klm-blauw);
+
+}
+
+/*****************************************************/
+/* De pijl die omhoog wijst bij de naar boven button */
+/*****************************************************/
+.up {
+	fill: #479FD9;
+}
+
+/****************************************/
+/* Op zoek naar speciale aanbiedingen? */
+/****************************************/
+
+main>div:first-of-type {
+	background-color: var(--color-background);
+	padding: 2em 1em 1em 1em;
+	margin-left: 1.2em;
+	margin-right: 1.2em;
+	box-shadow: rgb(124, 124, 124) 0px 2px 10px;
+}
+
+main>div:first-of-type h3 {
+	font-family: var(--brood-tekst);
+	color: var(--selectedtab);
+	font-size: 1em;
+	width: auto;
+}
+
+main>div:first-of-type p {
+	font-family: var(--brood-tekst);
+	color: var(--selectedtab);
+	font-size: 1em;
+	width: auto;
+	margin-bottom: 3em;
+}
+
+main>div:first-of-type button {
+	display: inline-block;
+	width: 100%;
+	min-width: 200px;
+	align-self: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: var(--klm-blauw);
+	text-align: center;
+	padding-top: 3%;
+	border: none;
+	padding-bottom: 3%;
+	color: var(--color-background);
+	font-weight: 600;
+	text-transform: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: 0.5s;
+	font-size: 1rem;
+	font-weight: 500;
+
+}
+
+main>div:first-of-type button:hover {
+	transition: 0.5s;
+	box-shadow: 2px 5px 10px rgb(148, 148, 148);
+}
+
+main>div:nth-of-type(2) svg {
+	width: 5%;
+}
+
+main>div:nth-of-type(2) button {
+	display: inline-block;
+	width: 80%;
+	min-width: 200px;
+	align-self: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: var(--klm-blauw);
+	text-align: center;
+	padding-top: 3%;
+	border: none;
+	padding-bottom: 3%;
+	color: var(--color-background);
+	font-weight: 600;
+	text-transform: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: 0.5s;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.down {
+	fill: var(--klm-blauw);
+}
+
+
+
+
+
+/*************/
+/*  FOOTER   */
+/*************/
+footer {
+	display: flex;
+	width: 100%;
+}
+
+footer:hover {
+	border-left: 0;
+}
+
+footer nav {
+	position: fixed;
+	display: flex;
+	z-index: 1;
+	bottom: 0;
+	list-style-type: none;
+	width: 100%;
+	justify-content: center;
+	color: black;
+	background-color: var(--color-background);
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.395);
+
+
+}
+
+
+.hamburger-menu header nav:first-of-type:focus-within {
+	transform: translateX(0);
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	list-style-type: none;
+	align-items: center;
+
+
+}
+
+footer nav a:hover {
+	background-color: #999;
+	transition: 0.5s ease-in-out;
+	border-left: none;
+}
+
+footer nav a img {
+	width: 25%;
+	display: flex;
+	margin-left: 30px;
+	padding-top: 10px;
+}
+
+
+footer nav li a {
+	display: grid;
+	color: black;
+	text-decoration: none;
+	font-size: 11px;
+	font-family: 'Segoe UI', sans-serif;
+	text-align: center;
+}
+
+footer>ul {
+	margin-top: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	gap: 0.5em;
+	margin-bottom: 5em;
+}
+
+footer>ul li a {
+	color: #999;
+	font-family: var(--brood-tekst);
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+footer>ul span {
+	color: #c2deea;
+}
+
+/***************************/
+/*  PAGINA 2 - INFORMATIE */
+/***************************/
+
+main[class="informatie"] {
+	overflow: hidden;
+}
+
+main[class="informatie"]>h1:first-of-type {
+	font-family: var(--kop-tekst);
+	margin-top: 1em;
+	margin-left: 1em;
+	color: var(--selectedtab);
+}
+
+main[class="informatie"]>h1:nth-of-type(2) {
+	font-family: var(--kop-tekst);
+	margin-top: 0.5em;
+	margin-left: 1em;
+	color: var(--selectedtab);
+	font-size: 0.5em;
+}
+
+main[class="informatie"]>h1:nth-of-type(3) {
+	font-family: var(--kop-tekst);
+	margin: auto;
+	color: var(--selectedtab);
+	font-size: 1.5em;
+}
+
+main[class="informatie"]>h1:nth-of-type(4) {
+	font-family: var(--kop-tekst);
+	margin: auto;
+	color: var(--selectedtab);
+	font-size: 1.5em;
+	width: 90%;
+	margin-left: 1.3em;
+}
+
+main[class="informatie"] h3 {
+	margin-left: 0.5em
+}
+
+main[class="informatie"] p {
+	font-family: var(--brood-tekst);
+	margin-top: 0, 5em;
+	margin-left: 0.5em;
+	color: var(--selectedtab);
+}
+
+main[class="informatie"] h1:nth-of-type(2) {
+	font-family: var(--kop-tekst);
+	margin-top: 1em;
+	margin-left: 1.2em;
+	color: var(--selectedtab);
+	font-size: 1.5em;
+}
+
+main[class="informatie"]>ul:first-of-type {
+	scroll-snap-type: none;
+	display: block;
+	width: 100%;
+	position: static;
+	margin-left: 0;
+	margin-top: 1em;
+	padding-top: 1em;
+
+}
+
+main[class="informatie"]>ul li:last-of-type {
+	margin-right: 2em;
+}
+
+main[class="informatie"]>ul li {
+	box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
+}
+
+
+main[class="informatie"]ul>li:nth-of-type(4) div {
+	margin-bottom: 0;
+}
+
+main[class="informatie"]>ul li div {
+	color: black;
+	position: static;
+	background-color: var(--color-background);
+	width: 85%;
+	margin-bottom: 2em;
+}
+
+
+
+main[class="informatie"]>ul:first-of-type li {
+	box-shadow: 1px 0px 10px rgb(96, 96, 96);
+	margin-left: 2em;
+}
+
+main[class="informatie"]>ul:nth-of-type(2) li {
+	margin-right: 0;
+}
+
+main[class="informatie"]ul:nth-of-type(2) {
+	
+	display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    background-color: var(--wit-tint2);
+}
+
+main[class="informatie"]>ul li section {
+	background-color: #f8f9f8;
+}
+
+main[class="informatie"]>ul li div {
+	background-color: var(--color-background);
+	width: 95%;
+}
+
+/* De display block Footer */
+main[class="informatie"]>ul:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	width: 100%;
+	background-color: var(--wit-tint2);
+	height: auto;
+	margin-top: 2em;
+
+}
+
+main[class="informatie"]>ul:nth-of-type(2) li a {
+	padding: 1em;
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	width: 100%;
+	background-color: var(--wit-tint2);
+	color: var(--selectedtab);
+	font-family: 'Noa LT Std';
+}
+
+main[class="informatie"]>ul:nth-of-type(2) ul li {
+	background-color: var(--wit-tint2);
+}
+
+main[class="informatie"]>ul:nth-of-type(2) svg {
+	width: 4%;
+}
+
+
+/* De kleurtjes van de SVG animaties! */
+
+
+/* Koffer en tas */
+.baggage0 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #1BB6F6;
+}
+
+.baggage1 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #2BA0CF;
+}
+
+.baggage2 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #5ED0FF;
+}
+
+.baggage3 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #1A1A1A;
+}
+
+.baggage4 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #FEFEFE;
+}
+
+.baggage5 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #F1F1F1;
+}
+
+.baggage6 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #D1D1D1;
+}
+
+.baggage7 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #DEDEDE;
+}
+
+/* Etiketten */
+
+.cards1 {
+	fill: #E37222;
+}
+
+.cards2 {
+	fill: #003145;
+}
+
+.cards3 {
+	fill: #01A1DE;
+}
+
+.cards4 {
+	fill: #FFFFFF;
+}
+
+/* Koffer Animatie */
+
+#koffer {
+	animation: kofferAnimatie 5s infinite alternate;
+	animation-delay: 2s;
+}
+
+/* Etiketten Animatie */
+
+.cards1 {
+	animation: cardsShuffle 2s infinite alternate;
+	transform-origin: 40px;
+	animation-delay: 1s;
+}
+
+.cards2 {
+	animation: cardsShuffle2 2s infinite alternate;
+	transform-origin: 40px;
+	animation-delay: 1.5s;
+}
+
+.cards3 {
+	animation: cardsShuffle3 2s infinite alternate;
+	transform-origin: 40px;
+	animation-delay: 2s;
+}
+
+.cards4 {
+	animation: cardsShuffle3 2s infinite alternate;
+	transform-origin: 40px;
+	animation-delay: 2s;
+
+}
+/**********************************/
+/* Tickets Animatie + attributen */
+/**********************************/
+
+.tick0 {
+	fill: #D7F6FF;
+}
+
+.tick1 {
+	fill: #00A1DE;
+}
+
+.tick2 {
+	fill: none;
+	stroke: #D9D9D9;
+	stroke-width: 3.1925;
+	stroke-miterlimit: 10;
+}
+
+.tick3 {
+	fill: none;
+	stroke: #D9D9D9;
+	stroke-width: 3.1925;
+	stroke-miterlimit: 10;
+	stroke-dasharray: 6.5694, 6.5694;
+}
+
+.tick4 {
+	fill: #B8EEFF;
+}
+
+.tick5 {
+	fill: #706F6F;
+}
+
+.tick6 {
+	fill: none;
+	stroke: #4B4B70;
+	stroke-width: 1.6304;
+	stroke-linecap: round;
+	stroke-miterlimit: 10;
+}
+
+/************************/
+/* Telefoon Attributen */
+/***********************/
+
+.phone0 {
+	fill: #000A2D;
+}
+
+.phone1 {
+	fill: #86dfff;
+}
+
+.phone2 {
+	fill: #F9DECA;
+}
+
+/*********************/
+/* Hover op ticket! */
+/*********************/
+
+.kaart:hover {
+	animation: ticketKaart 2s infinite alternate;
+	transition: 1s;
+
+}
+
+/***********************/
+/* Telefoon animatie! */
+/***********************/
+
+#rechterhand {
+	animation: linkerHand 2s infinite alternate;
+	animation-delay: 2s;
+}
+
+#telefoon {
+	animation: linkerHand 2s infinite alternate;
+	animation-delay: 2s;
+
+}
+
+#linkerhand {
+	animation: rechterHand 2s infinite alternate;
+}
+
+/****************************/
+/* Aanvullende hulp van KLM*/
+/****************************/
+
+main[class="informatie"]>a {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 16px;
+	background-color: var(--color-background);
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 1em;
+	padding: 1em 1em 0.5em;
+	box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
+	;
+	text-decoration: none;
+
+}
+
+main[class="informatie"]>a:nth-of-type(3) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 16px;
+	background-color: var(--color-background);
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 1em;
+	padding: 1em 1em 0.5em;
+	box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
+	;
+
+}
+
+main[class="informatie"]>a h3 {
+	color: var(--selectedtab);
+	font-family: var(--kop-tekst);
+	margin-bottom: 16px;
+	margin-left: 0;
+}
+
+main[class="informatie"]>a p {
+	margin: 8px 0;
+	font-family: var(--brood-tekst);
+	font-size: 0.875rem;
+	font-weight: 300;
+
+}
+
+main[class="informatie"]>a:last-of-type {
+	margin-bottom: 3em;
+
+}
+
+main[class="informatie"]>hr {
+	margin-bottom: 3em;
+	border: solid 0.5px #B8EEFF;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+main[class="informatie"]>section:first-of-type {
+	display: flex;
+}
+
+/*********************/
+/* De Radio Buttons */
+/*********************/
+
+main[class="informatie"]>section:first-of-type label>input {
+	display: flex;
+	order: -1;
+	margin-right: 1em;
+	border: solid 2px var(--klm-blauw);
+	
+}
+
+main[class="informatie"]>section:first-of-type label {
+	display: flex;
+	order: 1;
+	font-family: var(--brood-tekst);
+	color: var(--selectedtab);
+}
+
+main[class="informatie"]>section label>input {
+	display: flex;
+	order: -1;
+	margin-right: 1em;
+	margin-left: 2em;
+	font-family: var(--brood-tekst);
+	color: var(--klm-blauw);
+}
+
+main[class="informatie"] h5 {
+	margin-left: 2em;
+	font-family: var(--brood-tekst);
+	color: var(--selectedtab);
+	font-weight: 500;
+	margin-bottom: 0.5em;
+}
+
+main[class="informatie"]>ul:nth-of-type(2) hr {
+    border: solid 0.5px #c2deea;
+
+}
+
+/**************/
+/* ANIMATIES */
+/*************/
+
+@keyframes kofferAnimatie {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+
+	}
+}
+
+@keyframes cardsShuffle {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(20deg);
+	}
+}
+
+@keyframes cardsShuffle2 {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(10deg);
+	}
+}
+
+@keyframes cardsShuffle3 {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(5deg);
+	}
+}
+
+@keyframes ticketKaart {
+	0% {
+		transform: scale(100%);
+	}
+
+	100% {
+		transform: scale(80%);
+	}
+}
+
+@keyframes linkerHand {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(10deg);
+	}
+
+	50% {
+		transform: rotateZ(0deg);
+	}
+}
+
+@keyframes rechterHand {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(-20%);
+	}
+
+	50% {
+		transform: translateY(0%);
+	}
 }

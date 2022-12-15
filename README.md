@@ -106,13 +106,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="./images/Longsite.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="./images/screenshot1.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="./images/Menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="./images/menuscreenshot.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="./images/Account.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<video controls autoplay muted loop src="./images/filmpie.mov"  width="100%" >  
 
 </details>
 
@@ -126,13 +126,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  ik wilde graag tabjes toevoegen die ook op de KLM-site stonden. Doormiddel van deze tabjes kan de gebruiken namelijk kiezen
+  of ze via de reguliere manier konden boeken of zouden kunnen boeken via miles. Ik heb op een aantal sites lopen kijken
+  want het zou super handig zijn om gebruik te kunnen maken van je miles als je een ferquente vlieger bent. Ongeacht je 
+  beperking. 
 
+  <img src="./images/tabjes.png" width="375px" alt="breakdown van een dynamisch deel">
+
+
+  
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Ali            | Dana               | Robin        | Tristan           |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
@@ -142,9 +149,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - De width van de browser zorgt ervoor dat alles niet goed zit.
+  - Stof van de lessen toepassen (Minder op W3schools zitten)
+  - De tabjes hoeven niet persee te werken, het gaat om hoe het eruit ziet.
   - ...
 
 </details>
@@ -159,8 +166,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Naar de li's kijken van mijn UL. Er is geen sectie op de KLM website genaamd: "KLM Holidays". Hier is een
+  horizontale scroll aanwezig waar de gebruiker tussen landen kan kiezen. Ik gebruikte eerste alleen a-tags, 
+  maar ik had al een vermoedde dat het niet zo gedaan moest worden. ik heb een UL toegepast, die Li-tags bevatten
+  en a's. Het enige probleem is dat binnen de a, een h3-tag en p in zitten. Ik wilde een achtergrond toepassen, 
+  maar dat werkte per individueel element en niet de hele parent. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -173,11 +183,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  Vasilis hielp me doormiddel van een div te gebruiken voor vormgeving. Dan mag je het namelijk wel gebruiken en
+  om position absolute te gebruiken om de transparente blauw achtergronden de positioneren binnen het kader van de 
+  section waar ook de bestemming foto in zit. Dit geldt ook voor het "Reis Verrijken" gedeelte die later op de website 
+  komt.
 
-  - punt 1
-  - punt 2
-  - nog een punt
+
+  - Lestof toepassen! Niet van externe websites.
+  - Niet alles hoeft te werken (Dus niet alles letterlijk uitwerken).
+  - Begrijpen wat de code betekent en ervoor zorgen dat ik de JUISTE tags gebruik.
 - ...
 
 </details>
@@ -192,30 +206,38 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 8e werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  De website van KLM hoeft niet persee toegankelijk te zijn voor iedereen omdat niet iedereen ook 
+  instaat is om te reizen (Die een beperking hebben.) Voor hen die toch wel op reis willen gaan, zijn
+  er bepaalde mogelijkheden, zoals een screenreader toegepast. In principe werkt het contrast van KLM prima
+  want de website is wit met donkere kopjes, teksten en andere elementen die het toch wat duidelijker maken dan 
+  een website met totaal verkeerde kleuren. Iemand die kleurenblind is zou best op de KLM-site kunnen zitten omdat
+  de relevantie ligt in het boeken van een vlucht.
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  De screenreader werkt super goed via het aria-label! De originele website van KLM had een vrijwel
+  onduidelijk aria label. Te specifiek en te VEEL informatie wordt voorgelezen. Het is de bedoeling dat 
+  de gebruiker (met de beperking), moet begrijpen wat er in de website getoond wordt zonder echt te hoeven 
+  kijken. Ik heb voornamelijk uitgelegd dat er op de knop gedrukt kan worden om een bepaalde actie door
+  te voeren. 
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Via de tab-knop kan de gebruiker navigeren. De focus state komt te voorschijn en geeft de gebruiker aan waar
+  hij/zij zich bevindt. Eerlijk gezegd vind ik de focus-state van de KLM een beetje onduidelijk dus heb ik ervoor
+  gekozen om de box-shadow donkerder te maken. Zo kan je beter als gebruiker zien WAAR je je bevindt. 
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Online heb ik ontdekt dat mensen met Parkinson een speciaal toetsenbord kunnen aanschaffen. In principe, omdat je dus
+  ook met de pijltjes toets opties kan maken; het zeker van pas zou komen. De KLM site kan zeker bediend worden met 
+  de volgende knoppen: Tab, Pijltjes, enter, etc. Dankzij het toepassen van de aria-label is daar dus meer duidelijkheid
+  bij gezet. 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Zoals ik melde bij mijn bevindingen, is dat de website heel goed werkt voor mensen met zicht beperkingen. Eerlijk
+   gezegd vind ik het best gewaagd om als blind persoon op reis te gaan maar we moeten op een lijn blijven. De aria-label
+   kan heel goed helpen + stel dat de beperkte persoon slecht zicht heeft, werken de kleuren goed in combinatie zonder 
+   dat je te hard moet kijken. Wit + de donkere kleuren zorgt voor een duidelijk effect die je niet kan missen. 
 
 </details>
 
@@ -229,13 +251,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik had moeite met het formulier, label en input. Ik begreep wat ze in hielden maar me de states werken
+  was wel vrij lastig. Tot dat ik er achter kwam dat je dus :valid en :invalid kan toepassen in de CSS. 
+  Een zeer helpend middel voor het geval ik dus wil aankaarten wat de gebruiker ingevoerd heeft. 
 
+  Verder beperkte ik mezelf met het NIET gebruiken van ul's, terwijl daar nergens iets over gezegd is 
+  (Dat je het niet mag gebruiken). De ULs helpen heel erg omdat de KLM website ze ook veel in de soort
+  bestemmingen opties aanbiedt. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Ali            | Dana               | Robin        | Tristan        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
@@ -243,8 +270,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
+( Ik heb niet helemaal meekregen wat er deze keer bespreken werd omdat ik geconcentreerd verder ging werken!)
   - punt 1
   - punt 2
   - nog een punt
@@ -262,19 +288,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="./images/screenshot1.png" width="375px" alt="uitkomst opdracht 1">
+   <img src="./images/screenshot2.png" width="375px" alt="uitkomst opdracht 1">
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Ik vond het animeren van de SVG'tjes heel leuk! 
+  Ik heb verschillende soorten animatie stijlen toegepast
+  en via de CSS aangesproken met zowel de fill als soort animatie 
+  <img src="./images/animatiescreen.png" width="375px" alt="Heel leuk!">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+Helaas lukte de radio-buttons niet helemaal. Ik begrijp de basis, en ook de valid en invalid states
+maar ik wilde dus heel graag ervoor zorgen dat ALS de gebruiker "Ja" kiest, het label verdwijnt en 
+dan een p-tag te voorschijn komt die hen dan voorziet van feedback. 
+  <img src="./images/luktniet.png" width="375px" alt="bummer">
 </details>
 
 
@@ -288,8 +318,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+  2. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+  3. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+  4. https://dlo.mijnhva.nl/d2l/le/content/437099/Home
 
 </details>
