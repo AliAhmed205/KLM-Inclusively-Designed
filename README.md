@@ -112,7 +112,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="./images/menuscreenshot.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-<video controls autoplay muted loop src="./images/filmpie.mov"  width="100%" >  
+  <img src="./images/animatiescreen.png" width="375px" alt="Heel leuk!">
 
 </details>
 
